@@ -23,7 +23,7 @@ a {
 }
 
 .active-icon { 
-  color: #B57295 !important;
+  color: #008000 !important;
 }
 
 .sidebar-items { 
@@ -40,7 +40,7 @@ a {
 }
 
 .sidebar-items:hover svg { 
-  color: #B57295;
+  color: green;
 }
 
 .sidebar-items:not(:last-child) { 

@@ -5,24 +5,24 @@ const data = {
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
   datasets: [
       {
-          label: 'My Balance',
+          label: 'Balance',
           fill: false,
           lineTension: 0.5,
-          backgroundColor: '#db86b2',
-          borderColor: '#B57295',
+          backgroundColor: '#008000 ',
+          borderColor: '#008000 ',
           borderCapStyle: 'butt',
           borderDashOffset: 0.0,
-          borderJoinStyle: '#B57295',
-          pointBorderColor: '#B57295',
+          borderJoinStyle: '#008000 ',
+          pointBorderColor: '#008000 ',
           pointBackgroundColor: '#fff',
           pointBorderWidth: 1,
           pointHoverRadius: 5,
-          pointHoverBackgroundColor: '#B57295',
-          pointHoverBorderColor: '#B57295',
+          pointHoverBackgroundColor: '#008000 ',
+          pointHoverBorderColor: '#008000 ',
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: [500, 300, 400, 500, 800, 650, 700, 690, 1000, 1200, 1050, 1300],
+          data: [500, 300, 400, 500, 800, 650, 700, 850, 1100, 1400, 1600, 2500],
       },
   ],
 }
@@ -39,7 +39,6 @@ const options = {
           grid: {
               borderDash: [3, 3],
           },
-          // beginAtZero: true, // this works
       },
   },
   plugins: {

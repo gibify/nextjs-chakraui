@@ -39,6 +39,7 @@ import {
 
 export default function Dashboard() {
   const [display, setDisplay] = useState('hide');
+  const [value, setValue] = useState(1);
 
   function handleOnClick() {
     if(display == 'show') { 
@@ -110,7 +111,7 @@ export default function Dashboard() {
             </Flex>
           </Flex>
           <Flex flexDir='column' alignItems='center' mb={10} mt={5}>
-            <Avatar my={2} src='/avatar.jpg' />
+            <Avatar my={2} src='/avatar.jpeg' />
               <Text textAlign='center'>Evandro Gibicoski</Text>
           </Flex>
         </Flex>
@@ -124,9 +125,9 @@ export default function Dashboard() {
       overflow='auto'
       minH='100vh'
     > 
-      <Heading fontWeight='normal'>Wellcome back, <Flex fontWeight='bold' display='inline-flex'>Evandro</Flex></Heading>
+      <Heading fontWeight='normal' mb={4}>Wellcome back, <Flex fontWeight='bold' display='inline-flex'>Evandro</Flex></Heading>
       <Text color='gray' fontSize='sm'>Balance</Text>
-      <Text fontWeight='bold' fontSize='2xl'>$15,150.00</Text>
+      <Text fontWeight='bold' fontSize='2xl'>$2,500.00</Text>
       <MyChart />
       <Flex justifyContent='space-between' mt={8}>
         <Flex align='flex-end'>
@@ -150,10 +151,10 @@ export default function Dashboard() {
               <Tr>
                 <Td>
                   <Flex align='center'>
-                    <Avatar size='sm' mr={2} />
+                    <Avatar size='sm' mr={2} src='/apple-logo.png'/>
                     <Flex flexDir='column'>
                       <Heading size='sm' letterSpacing='tight'>Apple</Heading>
-                      <Text fontSize='sm' color='gray'>Jan 20, 2021 at 1:40pm</Text>
+                      <Text fontSize='sm' color='gray'>Oct 25, at 1:40pm</Text>
                     </Flex>
                   </Flex>
                 </Td>
@@ -165,10 +166,10 @@ export default function Dashboard() {
               <Tr>
                 <Td>
                   <Flex align='center'>
-                    <Avatar size='sm' mr={2} />
+                    <Avatar size='sm' mr={2} src='/starbucks-logo.png'/>
                     <Flex flexDir='column'>
                       <Heading size='sm' letterSpacing='tight'>Starbucks</Heading>
-                      <Text fontSize='sm' color='gray'>Sep 25, 2021 at 9:00am</Text>
+                      <Text fontSize='sm' color='gray'>Oct 20, at 9:00am</Text>
                     </Flex>
                   </Flex>
                 </Td>
@@ -179,61 +180,61 @@ export default function Dashboard() {
               <Tr>
                 <Td>
                   <Flex align='center'>
-                    <Avatar size='sm' mr={2} />
+                    <Avatar size='sm' mr={2} src='/samsung-logo.png' />
                     <Flex flexDir='column'>
                       <Heading size='sm' letterSpacing='tight'>Samsung</Heading>
-                      <Text fontSize='sm' color='gray'>Fev 15, 2021 at 11:00am</Text>
+                      <Text fontSize='sm' color='gray'>Oct 15, at 11:00am</Text>
                     </Flex>
                   </Flex>
                 </Td>
                 <Td>Devices</Td>
                 <Td isNumeric>$50+</Td>
-                <Td isNumeric><Text fontWeight='bold' display='inline-table'>$850</Text>.00</Td>
+                <Td isNumeric><Text fontWeight='bold' display='inline-table'>$350</Text>.00</Td>
               </Tr>
             {display == 'show' &&
                 <>
                 <Tr>
                 <Td>
                   <Flex align='center'>
-                    <Avatar size='sm' mr={2} />
+                    <Avatar size='sm' mr={2} src='/apple-logo.png' />
                     <Flex flexDir='column'>
                       <Heading size='sm' letterSpacing='tight'>Apple</Heading>
-                      <Text fontSize='sm' color='gray'>Jan 20, 2021 at 1:40pm</Text>
+                      <Text fontSize='sm' color='gray'>Oct 13, at 1:40pm</Text>
                     </Flex>
                   </Flex>
                 </Td>
                 <Td>Eletronic</Td>
-                <Td isNumeric>$2+</Td>
-                <Td isNumeric><Text fontWeight='bold' display='inline-table'>$242</Text>.00</Td>
+                <Td isNumeric>$26+</Td>
+                <Td isNumeric><Text fontWeight='bold' display='inline-table'>$342</Text>.00</Td>
               </Tr>
               
               <Tr>
                 <Td>
                   <Flex align='center'>
-                    <Avatar size='sm' mr={2} />
+                    <Avatar size='sm' mr={2} src='/starbucks-logo.png' />
                     <Flex flexDir='column'>
                       <Heading size='sm' letterSpacing='tight'>Starbucks</Heading>
-                      <Text fontSize='sm' color='gray'>Sep 25, 2021 at 9:00am</Text>
+                      <Text fontSize='sm' color='gray'>Oct 05, at 9:00am</Text>
                     </Flex>
                   </Flex>
                 </Td>
                 <Td>Cafe</Td>
-                <Td isNumeric>$20+</Td>
-                <Td isNumeric><Text fontWeight='bold' display='inline-table'>$85</Text>.00</Td>
+                <Td isNumeric>$10+</Td>
+                <Td isNumeric><Text fontWeight='bold' display='inline-table'>$55</Text>.00</Td>
               </Tr>
               <Tr>
                 <Td>
                   <Flex align='center'>
-                    <Avatar size='sm' mr={2} />
+                    <Avatar size='sm' mr={2} src='/samsung-logo.png' />
                     <Flex flexDir='column'>
                       <Heading size='sm' letterSpacing='tight'>Samsung</Heading>
-                      <Text fontSize='sm' color='gray'>Fev 15, 2021 at 11:00am</Text>
+                      <Text fontSize='sm' color='gray'>Oct 03, at 11:00am</Text>
                     </Flex>
                   </Flex>
                 </Td>
                 <Td>Devices</Td>
-                <Td isNumeric>$50+</Td>
-                <Td isNumeric><Text fontWeight='bold' display='inline-table'>$850</Text>.00</Td>
+                <Td isNumeric>$80+</Td>
+                <Td isNumeric><Text fontWeight='bold' display='inline-table'>$250</Text>.00</Td>
               </Tr>
                 </>
               }
@@ -259,8 +260,135 @@ export default function Dashboard() {
       flexDir='column'
       overflow='auto'
     >
-
-    </Flex>
+      <Flex alignContent='center'>
+        <InputGroup bgColor='#fff' mb={4} border='none' borderColor='#fff' borderRadius='10p' mr={2}>
+        <InputLeftElement pointerEvents='none' children={<FiSearch color='gray' />} />
+        <Input type='number' placeholder='Search'  borderRadius='10px' />
+        </InputGroup>
+        <IconButton aria-label='' icon={<FiBell />} fontSize='sm' bgColor='#fff' borderRadius='10px' p='10px' />
+        <Flex w={25} h={25} bgColor='#008000' borderRadius='50%' color='#fff' align='center' justify='center' ml='-3' mt='-2' zIndex='1' fontSize='xs'>
+          2
+        </Flex>
+      </Flex>
+      <Heading letterSpacing='light'>Cards</Heading>
+      {value == 1 && 
+        <Box borderRadius='24px' mt={4} w='100%' h='200px' bgGradient='linear(to-t, #0a090a, #259a4c)'>
+        <Flex p="1em" color="#fff" flexDir="column" h="100%" justify="space-between">
+          <Flex justify="space-between" w="100%" align="flex-start">
+              <Flex flexDir="column">
+                  <Text color="gray.400">Current Balance</Text>
+                  <Text fontWeight="bold" fontSize="xl">$4,750.00</Text>
+              </Flex>
+              <Flex align="center">
+                  <Icon mr={2} as={FiCreditCard} />
+                  <Text>Rise</Text>
+              </Flex>
+          </Flex>
+          <Text mb={4}>**** **** **** 4587</Text>
+          <Flex align="flex-end" justify="space-between">
+              <Flex>
+                  <Flex flexDir="column" mr={4}>
+                      <Text textTransform="uppercase" fontSize="xs">Valid Thru</Text>
+                      <Text fontSize="lg">10/23</Text>
+                  </Flex>
+                  <Flex flexDir="column">
+                      <Text textTransform="uppercase" fontSize="xs">CVV</Text>
+                      <Text fontSize="lg">***</Text>
+                  </Flex>
+              </Flex>
+              <Icon as={FiCreditCard} />
+          </Flex>
+        </Flex>
+        </Box>
+      }
+      {value == 2 && 
+        <Box borderRadius='24px' mt={4} w='100%' h='200px' bgGradient='linear(to-t, #0a090a, #8a0496)'>
+        <Flex p="1em" color="#fff" flexDir="column" h="100%" justify="space-between">
+          <Flex justify="space-between" w="100%" align="flex-start">
+              <Flex flexDir="column">
+                  <Text color="gray.400">Current Balance</Text>
+                  <Text fontWeight="bold" fontSize="xl">$3,700.00</Text>
+              </Flex>
+              <Flex align="center">
+                  <Icon mr={2} as={FiCreditCard} />
+                  <Text>Rise</Text>
+              </Flex>
+          </Flex>
+          <Text mb={4}>**** **** **** 1250</Text>
+          <Flex align="flex-end" justify="space-between">
+              <Flex>
+                  <Flex flexDir="column" mr={4}>
+                      <Text textTransform="uppercase" fontSize="xs">Valid Thru</Text>
+                      <Text fontSize="lg">10/24</Text>
+                  </Flex>
+                  <Flex flexDir="column">
+                      <Text textTransform="uppercase" fontSize="xs">CVV</Text>
+                      <Text fontSize="lg">***</Text>
+                  </Flex>
+              </Flex>
+              <Icon as={FiCreditCard} />
+          </Flex>
+        </Flex>
+        </Box>
+      }
+      {value == 3 && 
+        <Box borderRadius='24px' mt={4} w='100%' h='200px' bgGradient='linear(to-t, #0a090a, #bf2806)'>
+        <Flex p="1em" color="#fff" flexDir="column" h="100%" justify="space-between">
+          <Flex justify="space-between" w="100%" align="flex-start">
+              <Flex flexDir="column">
+                  <Text color="gray.400">Current Balance</Text>
+                  <Text fontWeight="bold" fontSize="xl">$4,700.0</Text>
+              </Flex>
+              <Flex align="center">
+                  <Icon mr={2} as={FiCreditCard} />
+                  <Text>Rise</Text>
+              </Flex>
+          </Flex>
+          <Text mb={4}>**** **** **** 2050</Text>
+          <Flex align="flex-end" justify="space-between">
+              <Flex>
+                  <Flex flexDir="column" mr={4}>
+                      <Text textTransform="uppercase" fontSize="xs">Valid Thru</Text>
+                      <Text fontSize="lg">12/25</Text>
+                  </Flex>
+                  <Flex flexDir="column">
+                      <Text textTransform="uppercase" fontSize="xs">CVV</Text>
+                      <Text fontSize="lg">***</Text>
+                  </Flex>
+              </Flex>
+              <Icon as={FiCreditCard} />
+          </Flex>
+        </Flex>
+        </Box>
+      }
+      <Flex justifyContent='center' mt={2}>
+        <Button size='xs' mx={1} bgColor={value == 1 ? 'gray.600' : 'gray.400'} onClick={() => setValue(1) } />
+        <Button size='xs' mx={1} bgColor={value == 1 ? 'gray.600' : 'gray.400'} onClick={() => setValue(2) } />
+        <Button size='xs' mx={1} bgColor={value == 1 ? 'gray.600' : 'gray.400'} onClick={() => setValue(3) } />
+      </Flex>
+      <Flex flexDir='column' my={4}>
+        <Flex justify='space-between' mb={2}>
+            <Text>Balance</Text>
+            <Text fontWeight='bold'>$640.42</Text>
+        </Flex>
+        <Flex justify='space-between'>
+            <Text>Credit Limit</Text>
+            <Text fontWeight='bold'>$1550.00</Text>
+        </Flex>
+      </Flex>
+      <Heading letterSpacing='tight' size='md' my={4}>Send money to</Heading>
+      <Flex>
+        <AvatarGroup size='md' max={3}>
+            <Avatar src='' />
+            <Avatar src='' />
+            <Avatar src='' />
+            <Avatar src='' />
+            <Avatar src='' />
+        </AvatarGroup>
+        <Avatar icon={<FiPlus />} ml={2} color="#fff" bgColor='gray.300' />
+      </Flex> 
+      </Flex>
     </Flex>
   )
 }
+
