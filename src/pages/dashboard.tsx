@@ -262,7 +262,7 @@ export default function Dashboard() {
     >
       <Flex alignContent='center'>
         <InputGroup bgColor='#fff' mb={4} border='none' borderColor='#fff' borderRadius='10p' mr={2}>
-        <InputLeftElement pointerEvents='none' children={<FiSearch color='gray' />} />
+        <InputLeftElement pointerEvents='none' children={<FiSearch color='gray' />}/>
         <Input type='number' placeholder='Search'  borderRadius='10px' />
         </InputGroup>
         <IconButton aria-label='' icon={<FiBell />} fontSize='sm' bgColor='#fff' borderRadius='10px' p='10px' />
@@ -272,7 +272,7 @@ export default function Dashboard() {
       </Flex>
       <Heading letterSpacing='light'>Cards</Heading>
       {value == 1 && 
-        <Box borderRadius='24px' mt={4} w='100%' h='200px' bgGradient='linear(to-t, #0a090a, #259a4c)'>
+        <Box borderRadius='24px' mt={4} w='100%' h='200px' bgGradient='linear(to-t, #0a090a, #25409a)'>
         <Flex p="1em" color="#fff" flexDir="column" h="100%" justify="space-between">
           <Flex justify="space-between" w="100%" align="flex-start">
               <Flex flexDir="column">
@@ -379,9 +379,9 @@ export default function Dashboard() {
       <Heading letterSpacing='tight' size='md' my={4}>Send money to</Heading>
       <Flex>
         <AvatarGroup size='md' max={3}>
-            <Avatar src='' />
-            <Avatar src='' />
-            <Avatar src='' />
+            <Avatar src='/images/face_image_01.png' />
+            <Avatar src='/images/face_image_02.png' />
+            <Avatar src='/images/face_image_03.png' />
             <Avatar src='' />
             <Avatar src='' />
         </AvatarGroup>
