@@ -51,60 +51,68 @@ export default function Dashboard() {
 
   return (
     <Flex 
-      h='100vh'
-      flexDir='row'
+      h={[null, null, '100vh']}
+      flexDir={['column', 'column', 'row']}
       overflow='hidden'
       maxW='2000px'
     >
       {/* left  */}
       <Flex
-        w='15%'
+        w={['100%', '100%', '15%', '15%', '15%']}
         flexDir='column'
         alignItems='center'
         backgroundColor='#020202'
         color='#fff'
       >
-        <Flex flexDir='column' justifyContent='space-between' h='100vh'>
+        <Flex 
+          flexDir='column' 
+          justifyContent='space-between' 
+          h={[null, null, '100vh']}
+        >
           <Flex flexDir='column'as='nav'>
             <Heading
               mt={50}
-              mb={100}
-              fontSize='4xl'
+              mb={[25, 50, 100]}
+              fontSize={['4xl','4xl','2xl','3xl','4xl']}
               alignSelf='center'
               letterSpacing='tight'
             >
-              Rise
+              B4 Bank
             </Heading>
-            <Flex flexDir='column' align='flex-start' justifyContent='center'>
-              <Flex className='sidebar-items'>
-                <Link>
-                  <Icon as={FiHome} fontSize='2xl' className='active-icon'></Icon>
+            <Flex 
+              flexDir={['row', 'row', 'column', 'column', 'column']}
+              align={['center', 'center', 'center', 'flex-start', 'flex-start']}
+              justifyContent='center'
+            >
+              <Flex className='sidebar-items' mr={[2, 6, 0, 0, 0]}>
+                <Link display={['none', 'none', 'flex', 'flex', 'flex']}>
+                  <Icon  as={FiHome} fontSize='2xl' className='active-icon'></Icon>
                 </Link>
-                <Link _hover={{ textDecor: 'none'}}>
+                <Link _hover={{ textDecor: 'none'}} display={['flex', 'flex', 'none', 'flex', 'flex']}>
                   <Text className='active'>Home</Text>
                 </Link>
               </Flex>
-              <Flex className='sidebar-items'>
-                <Link>
+              <Flex className='sidebar-items' mr={[2, 6, 0, 0, 0]}>
+                <Link display={['none', 'none', 'flex', 'flex', 'flex']}>
                   <Icon as={FiPieChart} fontSize='2xl'></Icon>
                 </Link>
-                <Link _hover={{ textDecor: 'none'}}>
+                <Link _hover={{ textDecor: 'none'}} display={['flex', 'flex', 'none', 'flex', 'flex']}>
                   <Text>Credit</Text>
                 </Link>
               </Flex>
-              <Flex className='sidebar-items'>
-                <Link>
+              <Flex className='sidebar-items' mr={[2, 6, 0, 0, 0]}>
+                <Link display={['none', 'none', 'flex', 'flex', 'flex']}>
                   <Icon as={FiDollarSign} fontSize='2xl'></Icon>
                 </Link>
-                <Link _hover={{ textDecor: 'none'}}>
+                <Link _hover={{ textDecor: 'none'}} display={['flex', 'flex', 'none', 'flex', 'flex']}>
                   <Text>Wallet</Text>
                 </Link>
               </Flex>
-              <Flex className='sidebar-items'>
-                <Link>
+              <Flex className='sidebar-items' mr={[2, 6, 0, 0, 0]}>
+                <Link display={['none', 'none', 'flex', 'flex', 'flex']}>
                   <Icon as={FiBox} fontSize='2xl'></Icon>
                 </Link>
-                <Link _hover={{ textDecor: 'none'}}>
+                <Link _hover={{ textDecor: 'none'}} display={['flex', 'flex', 'none', 'flex', 'flex']}>
                   <Text>Services</Text>
                 </Link>
               </Flex>
@@ -119,7 +127,7 @@ export default function Dashboard() {
 
       { /* center  */}
     <Flex
-      w='55%'
+      w={['100%', '100%', '60%', '60%', '55%']}
       p='3%'
       flexDir='column'
       overflow='auto'
@@ -141,7 +149,7 @@ export default function Dashboard() {
           <Table variant='unstyled' mt={4}>
             <Thead>
               <Tr color='gray'>
-                <Th>Name of transaction</Th>
+                <Th>transaction</Th>
                 <Th>Category</Th>
                 <Th isNumeric>Cash Back</Th>
                 <Th isNumeric>Amount</Th>
@@ -254,7 +262,8 @@ export default function Dashboard() {
     </Flex>
       {/* right */}
     <Flex
-      w='35%'
+      w={['100%', '100%', '35%']}
+      minW={[null, null, '300px', '300px', '400px']}
       bgColor='#F5F5F5'
       p='3%' 
       flexDir='column'
@@ -281,7 +290,7 @@ export default function Dashboard() {
               </Flex>
               <Flex align="center">
                   <Icon mr={2} as={FiCreditCard} />
-                  <Text>Rise</Text>
+                  <Text>B4 Bank</Text>
               </Flex>
           </Flex>
           <Text mb={4}>**** **** **** 4587</Text>
@@ -311,7 +320,7 @@ export default function Dashboard() {
               </Flex>
               <Flex align="center">
                   <Icon mr={2} as={FiCreditCard} />
-                  <Text>Rise</Text>
+                  <Text>B4 Bank</Text>
               </Flex>
           </Flex>
           <Text mb={4}>**** **** **** 1250</Text>
@@ -341,7 +350,7 @@ export default function Dashboard() {
               </Flex>
               <Flex align="center">
                   <Icon mr={2} as={FiCreditCard} />
-                  <Text>Rise</Text>
+                  <Text>B4 Bank</Text>
               </Flex>
           </Flex>
           <Text mb={4}>**** **** **** 2050</Text>
@@ -387,6 +396,17 @@ export default function Dashboard() {
         </AvatarGroup>
         <Avatar icon={<FiPlus />} ml={2} color="#fff" bgColor='gray.300' />
       </Flex> 
+      <Text color='gray' mt={10} mb={2}>Card Number</Text>
+      <InputGroup>
+        <InputLeftElement pointerEvents='none' children={<FiCreditCard color='gray.700'/>}/> 
+        <Input type='number' placeholder='xxxx xxxx xxxx xxxx' />
+      </InputGroup>
+      <Text color='gray' mt={10} mb={2}>Sum</Text>
+      <InputGroup>
+        <InputLeftElement pointerEvents='none' children={<FiDollarSign color='gray.700'/>}/> 
+        <Input type='number' placeholder='185.00' />
+      </InputGroup>
+      <Button mt={4} bgColor='blackAlpha.900' color='#fff' p={7} borderRadius={15}>Send Money</Button>
       </Flex>
     </Flex>
   )

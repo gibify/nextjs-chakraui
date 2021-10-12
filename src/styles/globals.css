@@ -46,3 +46,9 @@ a {
 .sidebar-items:not(:last-child) { 
   margin-bottom: 1.5em;
 }
+
+@media only screen and (max-width: 768px) {
+  .sidebar-items { 
+    margin-bottom: 0 !important;
+  }
+}
